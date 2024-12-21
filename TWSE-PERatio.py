@@ -54,7 +54,7 @@ def download_and_process_twse_csv(date: str) -> str:
         return ""
 
 # Main execution
-processed_output_file = download_and_process_twse_csv("20241220")
+# processed_output_file = download_and_process_twse_csv("20241220")
 today = date.today().strftime("%Y%m%d")
 processed_output_file = download_and_process_twse_csv(today)
 
