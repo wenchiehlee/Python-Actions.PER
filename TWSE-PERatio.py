@@ -34,11 +34,11 @@ def download_and_process_twse_csv(date: str) -> str:
         # Remove the first line (title) and any empty lines
         processed_lines = [line for line in lines[1:] if line.strip()]
 
-        # Preprocess lines to remove nested quotes and normalize fields
+        # Preprocess lines to remove nested quotes, normalize fields, and handle commas in numbers
         normalized_lines = []
         for line in processed_lines:
-            fields = line.split(",")
-            normalized_fields = [field.replace('"""', '"').strip('"') for field in fields]
+            fields = next(csv.reader([line]))
+            normalized_fields = [field.replace(",", "") for field in fields]  # Remove commas in numeric fields
             normalized_lines.append(normalized_fields)
 
         # Write processed data to a new CSV file with minimal quoting
@@ -54,7 +54,8 @@ def download_and_process_twse_csv(date: str) -> str:
         return ""
 
 # Main execution
-# processed_output_file = download_and_process_twse_csv("20241220")
+processed_output_file = download_and_process_twse_csv("20241220")
+
 today = date.today().strftime("%Y%m%d")
 processed_output_file = download_and_process_twse_csv(today)
 
