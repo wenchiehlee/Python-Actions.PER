@@ -9,7 +9,7 @@ import os
 def download_and_process_twse_csv(date: str) -> str:
     """
     Downloads the TWSE CSV file for a specified date and processes it to remove
-    the first line and empty lines, saving both the original and processed formats.
+    the first line and empty lines, saving the original and processed formats.
 
     Returns the path of the processed output file.
 
@@ -27,6 +27,15 @@ def download_and_process_twse_csv(date: str) -> str:
         # Send the GET request
         response = requests.get(base_url, params=params)
         response.raise_for_status()  # Raise an exception for HTTP errors
+
+        # Save the raw CSV file in the "raw" folder
+        raw_folder = "raw"
+        os.makedirs(raw_folder, exist_ok=True)
+        raw_file = os.path.join(raw_folder, f"TWSE_{date}.csv")
+        with open(raw_file, "w", encoding="utf-8") as raw_csv_file:
+            raw_csv_file.write(response.text)
+
+        print(f"Raw file saved as: {raw_file}")
 
         # Split response text into lines and process
         lines = response.text.splitlines()
@@ -47,15 +56,14 @@ def download_and_process_twse_csv(date: str) -> str:
             writer = csv.writer(processed_file, quoting=csv.QUOTE_MINIMAL)
             writer.writerows(normalized_lines)
 
-        print(f"TWSE PER CSV file for date {date} has been saved as '{processed_output_file}'.")
+        print(f"Processed file saved as: {processed_output_file}")
         return processed_output_file
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
         return ""
 
 # Main execution
-processed_output_file = download_and_process_twse_csv("20241220")
-
+#processed_output_file = download_and_process_twse_csv("20241220")
 today = date.today().strftime("%Y%m%d")
 processed_output_file = download_and_process_twse_csv(today)
 
