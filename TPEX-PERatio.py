@@ -93,8 +93,11 @@ if __name__ == "__main__":
         print(f"Error: {e}")
 
 # Check if the file exists and is not empty before copying
-if processed_output_file and os.path.exists(processed_output_file) and os.path.getsize(processed_output_file) > 0:
-    shutil.copy(processed_output_file, "TPEX.csv")
-    print(f"Processed CSV has also been copied to 'TPEX.csv'.")
-else:
-    print("No file to copy due to an error in processing or the file is empty.")
+    try:
+        if processed_output_file and os.path.exists(processed_output_file) and os.path.getsize(processed_output_file) > 0:
+            shutil.copy(processed_output_file, "TPEX.csv")
+            print(f"Processed CSV has also been copied to 'TPEX.csv'.")
+        else:
+            print("No file to copy due to an error in processing or the file is empty.")
+    except ValueError as e:
+        print(f"Error: {e}")
