@@ -25,9 +25,9 @@ jobs:
 
       - name: Running TWSE-PERatio.py
         run: |
-          python TWSE-PERatio.py
-          python TPEX-PERatio.py
-          python csv-merge.py
+          python TWSE-PERatio.py || true
+          python TPEX-PERatio.py || true
+          python csv-merge.py || true
 
       - name: Commit and Push The Results From Python Action
         run: |
