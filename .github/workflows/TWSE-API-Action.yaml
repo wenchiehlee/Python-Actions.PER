@@ -24,10 +24,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Running TWSE-PERatio.py
-        run: python TWSE-PERatio.py
-
-      - name: Running TPEX-PERatio.py
-        run: python TPEX-PERatio.py
+        run: |
+          python TWSE-PERatio.py
+          python TPEX-PERatio.py
+          python csv-merge.py
 
       - name: Commit and Push The Results From Python Action
         run: |
