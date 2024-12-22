@@ -23,8 +23,8 @@ jobs:
       - name: Installing all necessary packages
         run: pip install -r requirements.txt
 
-      - name: Running TWEX-PERatio.py
-        run: python TWEX-PERatio.py
+      - name: Running TWSE-PERatio.py
+        run: python TWSE-PERatio.py
 
       - name: Running TPEX-PERatio.py
         run: python TPEX-PERatio.py
