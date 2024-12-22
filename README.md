@@ -1,3 +1,4 @@
+[![TWSE API On GitHub Action](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml/badge.svg?branch=main)](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml)
 # Python.TWSE-PER
 Working space for Python.TWSE-PER
 
