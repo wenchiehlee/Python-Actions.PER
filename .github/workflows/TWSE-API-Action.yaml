@@ -1,11 +1,11 @@
-name: TWSE API On GitHub Action
+name: TWSE/TPEX AfterMarket API On GitHub Action
 on:
   push:
     branches:
       - main
   workflow_dispatch:
   schedule:
-    - cron: "10 2 * * *"     # Runs every day at 2:10 AM UTC
+    - cron: "0 7 * * *"  # Runs every day at 7:00 AM UTC (3:00 PM Taipei time)
 jobs:
   API:
     runs-on: ubuntu-latest
