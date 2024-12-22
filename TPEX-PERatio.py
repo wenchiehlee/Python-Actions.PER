@@ -67,6 +67,9 @@ def download_and_process_tpex_csv(date_str):
     ]
     df = df.reindex(columns=desired_order)
 
+    # Remove metadata rows (e.g., rows containing "共")
+    df = df[~df.apply(lambda row: row.astype(str).str.contains("共").any(), axis=1)]
+
     # Trim trailing spaces in the "證券名稱" column
     if "證券名稱" in df.columns:
         df["證券名稱"] = df["證券名稱"].astype(str).str.strip()
