@@ -8,6 +8,8 @@ group:
     wenchiehlee/FindMind
     wenchiehlee/Python.TWSE-PER
     wenchiehlee/Selenium-Action.TPEX-company
+    wenchiehlee/twstock
+    wenchiehlee/rss2md
   files:
     - source: .gitignore
       dest:   .gitignore
