@@ -14,7 +14,7 @@ def download_and_process_twse_csv(date: str) -> str:
     Returns the path of the processed output file.
 
     :param date: Date in 'YYYYMMDD' format.
-    :return: The path to the processed CSV file.
+    :return: The path to the processed CSV file, or an empty string if no valid data exists.
     """
     base_url = "https://www.twse.com.tw/exchangeReport/BWIBBU_d"
     params = {
@@ -43,12 +43,21 @@ def download_and_process_twse_csv(date: str) -> str:
         # Remove the first line (title) and any empty lines
         processed_lines = [line for line in lines[1:] if line.strip()]
 
+        if not processed_lines:  # If no data after processing, return early
+            print("No valid data found in the response.")
+            return ""
+
         # Preprocess lines to remove nested quotes, normalize fields, and handle commas in numbers
         normalized_lines = []
         for line in processed_lines:
             fields = next(csv.reader([line]))
             normalized_fields = [field.replace(",", "") for field in fields]  # Remove commas in numeric fields
             normalized_lines.append(normalized_fields)
+
+        # Ensure there is data to write
+        if not normalized_lines:
+            print("Processed data is empty after normalization.")
+            return ""
 
         # Write processed data to a new CSV file with minimal quoting
         processed_output_file = f"TWSE_{date}.csv"
@@ -63,7 +72,6 @@ def download_and_process_twse_csv(date: str) -> str:
         return ""
 
 # Main execution
-#processed_output_file = download_and_process_twse_csv("20241220")
 today = date.today().strftime("%Y%m%d")
 processed_output_file = download_and_process_twse_csv(today)
 
