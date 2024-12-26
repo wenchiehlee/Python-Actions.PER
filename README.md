@@ -1,8 +1,8 @@
 [![TWSE API On GitHub Action](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml/badge.svg?branch=main)](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml)
 
-![](https://img.shields.io/badge/TWSE-grey) ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwenchiehlee%2FPython.TWSE-PER%2Fmain%2FTWSE.json)
+![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwenchiehlee%2FPython.TWSE-PER%2Fmain%2FTWSE.json)
 
-![](https://img.shields.io/badge/TPEX-grey) ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwenchiehlee%2FPython.TWSE-PER%2Fmain%2FTPEX.json)
+![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwenchiehlee%2FPython.TWSE-PER%2Fmain%2FTPEX.json)
 
 # Python.TWSE-PER
 Working space for Python.TWSE-PER
