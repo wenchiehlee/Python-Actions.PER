@@ -41,5 +41,5 @@ jobs:
          git add -A
          git add *.csv 
          git add *.json
-         git commit -m "⬆️ GitHub Actions Results added"
-         git push
+         git commit -m "⬆️ GitHub Actions Results added" || true
+         git push || true
