@@ -29,11 +29,17 @@ jobs:
           python TPEX-PERatio.py || true
           python csv-merge.py || true
 
+      - name: Lines count
+        run: |
+          python CountCSVLine.py TWSE.json TWSE.csv
+          python CountCSVLine.py TPEX.json TPEX.csv
+
       - name: Commit and Push The Results From Python Action
         run: |
          git config --global user.name "github-actions[bot]"
          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
          git add -A
          git add *.csv 
+         git add *.json
          git commit -m "⬆️ GitHub Actions Results added"
          git push
