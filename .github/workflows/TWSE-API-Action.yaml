@@ -33,6 +33,7 @@ jobs:
         run: |
           python CountCSVLine.py TWSE.json TWSE.csv "TWSE Total Company"
           python CountCSVLine.py TPEX.json TPEX.csv "TPEX Total Company"
+          python CountCSVLine.py TWSE_TPEX.Json TWSE_TPEX.csv "TWSE+TPEX Total Company"
 
       - name: Commit and Push The Results From Python Action
         run: |
