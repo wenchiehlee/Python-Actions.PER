@@ -1,12 +1,14 @@
-[![TWSE API On GitHub Action](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml/badge.svg?branch=main)](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml)
+[![TWSE API On GitHub Action](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml/badge.svg?branch=main)](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml) 
 
-[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/refs/heads/main/TWSE.json)]()
-[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/refs/heads/main/TPEX.json)]()
+[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE.json)]()
+[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TPEX.json)]()
 
-[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/refs/heads/main/TWSE_TPEX.Json)]()
+[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE_TPEX.Json)]()
 
 # Python.TWSE-PER
-Working space for Python.TWSE-PER
+Working space for Python.TWSE-PER. The data is based on OpenData 
+  * [盤後資訊 > 上市個股日本益比、殖利率及股價淨值比（依代碼查詢） (臺灣證券交易所)](https://data.gov.tw/dataset/11547) and
+  * [盤後資訊 >上櫃股票個股本益比、殖利率、股價淨值比](https://data.gov.tw/dataset/11373).
 
 ## TWSE PER
 * https://www.twse.com.tw/exchangeReport/BWIBBU_d?response=html&date=20220701&selectType=ALL
