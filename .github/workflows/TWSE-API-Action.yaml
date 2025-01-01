@@ -28,7 +28,7 @@ jobs:
           python TWSE-PERatio.py || true
           python TPEX-PERatio.py || true
           # python csv-merge.py || true
-          csvstack TWSE.csv TPEX.csv | csvcut -c 證券代號,證券名稱,收盤價,殖利率(%),股利年度,本益比,股價淨值比, 財報年/季,每股股利(註)  > TWSE_TPEX1.csv
+          csvstack TWSE.csv TPEX.csv | csvcut -c 證券代號,證券名稱,收盤價,殖利率(%),股利年度,本益比,股價淨值比, 財報年/季,每股股利(註)  > TWSE_TPEX1.csv || trur
       - name: Lines count
         run: |
           python CountCSVLine.py TWSE.json TWSE.csv "TWSE Total Company"
