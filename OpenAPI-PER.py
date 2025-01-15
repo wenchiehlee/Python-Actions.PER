@@ -102,7 +102,7 @@ def write_summary_json(file_name, label, message):
 def main():
     # 預設輸出文件名
     today_str = datetime.now().strftime("%Y%m%d")
-    default_csv = f"{today_str}.csv"
+    default_csv = f"歷史資料/{today_str}.csv"
     backup_csv = "TWSE_TPEX.csv"
 
     # 檢查命令列參數
