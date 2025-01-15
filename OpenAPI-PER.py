@@ -103,7 +103,7 @@ def main():
     # 預設輸出文件名
     today_str = datetime.now().strftime("%Y%m%d")
     default_csv = f"{today_str}.csv"
-    backup_csv = "PER.csv"
+    backup_csv = "TWSE_TPEX.csv"
 
     # 檢查命令列參數
     if len(sys.argv) == 2:

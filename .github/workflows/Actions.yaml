@@ -1,4 +1,4 @@
-name: TWSE/TPEX AfterMarket API On GitHub Actions
+name: OpenAPI On GitHub Actions
 on:
   push:
     branches:
