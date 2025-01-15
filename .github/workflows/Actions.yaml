@@ -23,7 +23,7 @@ jobs:
       - name: Installing all necessary packages
         run: pip install -r requirements.txt
 
-      - name: Running TWSE-PERatio.py
+      - name: Running Python
         run: |
           python OpenAPI-PER.py || true
           # csvstack TWSE.csv TPEX.csv | csvcut -c "證券代號","證券名稱","收盤價","殖利率(%)","股利年度","本益比","股價淨值比","財報年/季","每股股利(註)"  > TWSE_TPEX.csv || true
