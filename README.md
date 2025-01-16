@@ -4,18 +4,20 @@
 ![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TPEX.json)⟶[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE_TPEX.json)](TWSE_TPEX.csv)
 
 # Python.TWSE-PER
-Working space for Python.TWSE-PER. The data is based on OpenData 
-  * [盤後資訊 > 上市個股日本益比、殖利率及股價淨值比（依代碼查詢） (臺灣證券交易所)](https://data.gov.tw/dataset/11547) and
-  * [盤後資訊 >上櫃股票個股本益比、殖利率、股價淨值比](https://data.gov.tw/dataset/11373).
+Working space for Python.TWSE-PER. 
 
-## TWSE PER
-* https://www.twse.com.tw/exchangeReport/BWIBBU_d?response=html&date=20220701&selectType=ALL
+There are two ways to get PER data of TWSE and TPEX stock. One is OpenAPI, one is web download.
+## The PER data based on OpenAPI
+  * [盤後資訊 > 上市個股日本益比、殖利率及股價淨值比（依代碼查詢） (臺灣證券交易所)](https://data.gov.tw/dataset/11547)
+      *  API: https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_d including historical PER
+  * [盤後資訊 >上櫃股票個股本益比、殖利率、股價淨值比](https://data.gov.tw/dataset/11373)
+      *  API: https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis 
 
-## TPEX PER
-
-* https://www.tpex.org.tw/web/stock/aftertrading/peratio_analysis/pera_result.php?l=zh-tw&o=htm&d=111/07/01&c=&s=0,asc
-
-
+## The PER data based on web download
+  * TWSE PER (including historical PER)
+    * https://www.twse.com.tw/exchangeReport/BWIBBU_d?response=html&date=20220701&selectType=ALL
+  * TPEX PER (including historical PER)
+    * https://www.tpex.org.tw/web/stock/aftertrading/peratio_analysis/pera_result.php?l=zh-tw&o=htm&d=111/07/01&c=&s=0,asc
 
 # 投資參考資料計算說明
 
