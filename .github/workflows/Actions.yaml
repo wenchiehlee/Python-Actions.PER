@@ -28,6 +28,10 @@ jobs:
           python OpenAPI-PER.py || true
           # csvstack TWSE.csv TPEX.csv | csvcut -c "證券代號","證券名稱","收盤價","殖利率(%)","股利年度","本益比","股價淨值比","財報年/季","每股股利(註)"  > TWSE_TPEX.csv || true
 
+      - name: Lines count
+        run: |
+          python CountCSVLine.py TWSE_TPEX.json TWSE_TPEX.csv "TWSE+TPEX 公司數"
+        
       - name: Commit and Push The Results From Python Action
         run: |
          git config --global user.name "github-actions[bot]"

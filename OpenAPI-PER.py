@@ -130,7 +130,7 @@ def main():
 
         # 寫入摘要 JSON 文件
         summary_file_name = f"{api_name.replace(' ', '_')}.json"
-        write_summary_json(summary_file_name, f"{api_name} 公司數量", len(data))
+        write_summary_json(summary_file_name, f"{api_name} 公司數", len(data))
 
 if __name__ == "__main__":
     main()
