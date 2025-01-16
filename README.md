@@ -1,7 +1,7 @@
-[![TWSE API On GitHub Action](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml/badge.svg?branch=main)](https://github.com/wenchiehlee/Python.TWSE-PER/actions/workflows/TWSE-API-Action.yaml) 
+[![OpenAPI On GitHub Actions](https://github.com/wenchiehlee/Python-Actions.PER/actions/workflows/Actions.yaml/badge.svg)](https://github.com/wenchiehlee/Python-Actions.PER/actions/workflows/Actions.yaml)
 
-[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE.json)](TWSE.csv)
-[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TPEX.json)](TPEX.csv)⟶[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE_TPEX.json)](TWSE_TPEX.csv)
+![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE.json)
+![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TPEX.json)⟶[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE_TPEX.json)](TWSE_TPEX.csv)
 
 # Python.TWSE-PER
 Working space for Python.TWSE-PER. The data is based on OpenData 
