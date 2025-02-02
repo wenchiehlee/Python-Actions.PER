@@ -26,7 +26,7 @@ jobs:
       - name: Running Python
         run: |
           python OpenAPI-PER.py || true
-          # csvstack TWSE.csv TPEX.csv | csvcut -c "證券代號","證券名稱","收盤價","殖利率(%)","股利年度","本益比","股價淨值比","財報年/季","每股股利(註)"  > TWSE_TPEX.csv || true
+          # csvstack TWSE.csv TPEX.csv | csvcut -c "股票代號","公司名稱","收盤價","殖利率(%)","股利年度","本益比","股價淨值比","財報年/季","每股股利(註)"  > TWSE_TPEX.csv || true
 
       - name: Lines count
         run: |
@@ -36,7 +36,6 @@ jobs:
         run: |
          git config --global user.name "github-actions[bot]"
          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-         git add -A
          git add *.csv 
          git add *.json
          git commit -m "⬆️ GitHub Actions Results added" || true
