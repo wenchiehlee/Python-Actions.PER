@@ -3,8 +3,8 @@
 ![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE.json)
 ![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TPEX.json)⟶[![Endpoint Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wenchiehlee/Python.TWSE-PER/main/TWSE_TPEX.json)](TWSE_TPEX.csv)
 
-# Python.TWSE-PER
-Working space for Python.TWSE-PER. 
+# Python-Actions.PER
+Working space for Python-Actions.PER
 
 There are two ways to get PER data of TWSE and TPEX stock. One is OpenAPI, one is web download.
 ## The PER data based on OpenAPI
@@ -19,11 +19,11 @@ There are two ways to get PER data of TWSE and TPEX stock. One is OpenAPI, one i
   * TPEX PER (including historical PER)
     * https://www.tpex.org.tw/web/stock/aftertrading/peratio_analysis/pera_result.php?l=zh-tw&o=htm&d=111/07/01&c=&s=0,asc
 
-# 投資參考資料計算說明
+## 投資參考資料計算說明
 
-## 重點摘要
+### 重點摘要
 
-### 1. **本益比 (Price-to-Earnings Ratio, P/E)**
+#### 1. **本益比 (Price-to-Earnings Ratio, P/E)**
 - **計算公式**：`收盤價 / 每股參考稅後純益`
 - 每股參考稅後純益計算基礎：
   - `公司稅後純益 / 發行參考股數`
@@ -33,7 +33,7 @@ There are two ways to get PER data of TWSE and TPEX stock. One is OpenAPI, one i
 
 ---
 
-### 2. **殖利率 (Dividend Yield)**
+#### 2. **殖利率 (Dividend Yield)**
 - **計算公式**：`(每股股利 / 收盤價) × 100%`
 - 每股股利計算基礎包含：
   - **現金股利**（元/股）。
@@ -42,14 +42,14 @@ There are two ways to get PER data of TWSE and TPEX stock. One is OpenAPI, one i
 
 ---
 
-### 3. **股價淨值比 (Price-to-Book Ratio, P/B)**
+#### 3. **股價淨值比 (Price-to-Book Ratio, P/B)**
 - **計算公式**：`收盤價 / 每股參考淨值`
 - 每股參考淨值的基礎來自：
   - 公開資訊觀測站公告的**最近一季淨值**。
 
 ---
 
-## 推計基礎與特殊說明
+### 推計基礎與特殊說明
 1. 若上市公司為新設公司，計算方式以該公司**申報資料**為基礎。
    - 例如：新公司設立未滿一年時，僅使用自設立以來的數據。
 2. 本頁面資料**不包含即時數據**，僅參考已申報的歷史資料。
@@ -57,7 +57,7 @@ There are two ways to get PER data of TWSE and TPEX stock. One is OpenAPI, one i
 
 ---
 
-## 注意事項
+### 注意事項
 - 資料僅供**研究參考**，**不應視為投資建議**。
 - 股利與財報資訊自**民國 106 年（西元 2017 年）**起提供。
 - 股票名稱若附註「`*`」，表示每股面額非新台幣 10 元，其計算方式已調整。
@@ -72,3 +72,5 @@ There are two ways to get PER data of TWSE and TPEX stock. One is OpenAPI, one i
 ---
 
 以上說明針對**本益比**、**殖利率**及**股價淨值比**的計算方式與邏輯提供清晰解釋，適合研究台股指標的投資者參考，**但不可作為直接投資依據**。
+
+# Python-Actions.IssueShares (已發行普通股數)
